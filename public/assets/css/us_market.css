@@ -1,0 +1,450 @@
+/* --- Light / Dark Mode Base Styling --- */
+body.light-mode .us-indices-section {
+    background-color: #ffffff;
+    color: #111;
+}
+
+body.dark-mode .us-indices-section {
+    background-color: #0d1117;
+    color: #e0e0e0;
+}
+
+body.light-mode .table {
+    background: #fff;
+    color: #222;
+    border-color: #e0e0e0;
+}
+
+body.dark-mode .table {
+    background: #161b22;
+    color: #ddd;
+    border-color: #30363d;
+}
+
+body.light-mode .table thead th {
+    background: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+body.dark-mode .table thead th {
+    background: #1c2128;
+    border-bottom: 2px solid #30363d;
+}
+
+body.light-mode .table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+body.dark-mode .table tbody tr:hover {
+    background: #1c2128;
+}
+
+/* Header Menu */
+body.light-mode .table-header-menu__link {
+    background: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+body.dark-mode .table-header-menu__link {
+    background: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+}
+
+body.light-mode .table-header-menu__link.active {
+    background: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+}
+
+body.dark-mode .table-header-menu__link.active {
+    background: #1f6feb;
+    color: #fff;
+    border-color: #1f6feb;
+}
+
+.table-header-menu__link {
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin-right: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Search Field */
+body.light-mode .market-list-search-field {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ced4da;
+}
+
+body.dark-mode .market-list-search-field {
+    background: #0d1117;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+}
+
+.market-list-search-field {
+    border-radius: 6px;
+    padding: 8px 14px;
+    transition: all 0.3s ease;
+}
+
+body.light-mode .market-list-search-field:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+body.dark-mode .market-list-search-field:focus {
+    border-color: #1f6feb;
+    box-shadow: 0 0 0 0.2rem rgba(31, 111, 235, 0.25);
+}
+
+body.light-mode .market-list-search-field::placeholder {
+    color: #6c757d;
+}
+
+body.dark-mode .market-list-search-field::placeholder {
+    color: #8b949e;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    border: 4px solid;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+body.light-mode .spinner {
+    border-color: #0d6efd;
+    border-top-color: transparent;
+}
+
+body.dark-mode .spinner {
+    border-color: #1f6feb;
+    border-top-color: transparent;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+body.light-mode .loading-text {
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+body.dark-mode .loading-text {
+    color: #8b949e;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Professional Pagination */
+.pagination-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+body.light-mode .pagination-info {
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+body.dark-mode .pagination-info {
+    color: #8b949e;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pagination-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 6px;
+    align-items: center;
+}
+
+.pagination-list .page-item {
+    margin: 0;
+}
+
+.pagination-list .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid;
+    text-decoration: none;
+}
+
+/* Light Mode Pagination */
+body.light-mode .pagination-list .page-link {
+    background: #fff;
+    color: #495057;
+    border-color: #dee2e6;
+}
+
+body.light-mode .pagination-list .page-link:hover:not(.disabled) {
+    background: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.2);
+}
+
+body.light-mode .pagination-list .page-item.active .page-link {
+    background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+    color: #fff;
+    border-color: #0d6efd;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.4);
+    font-weight: 600;
+    transform: scale(1.05);
+}
+
+body.light-mode .pagination-list .page-item.disabled .page-link {
+    background: #f8f9fa;
+    color: #adb5bd;
+    border-color: #dee2e6;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Dark Mode Pagination */
+body.dark-mode .pagination-list .page-link {
+    background: #21262d;
+    color: #c9d1d9;
+    border-color: #30363d;
+}
+
+body.dark-mode .pagination-list .page-link:hover:not(.disabled) {
+    background: #1f6feb;
+    border-color: #1f6feb;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(31, 111, 235, 0.3);
+}
+
+body.dark-mode .pagination-list .page-item.active .page-link {
+    background: linear-gradient(135deg, #1f6feb 0%, #1a5fd9 100%);
+    color: #fff;
+    border-color: #1f6feb;
+    box-shadow: 0 4px 12px rgba(31, 111, 235, 0.5);
+    font-weight: 600;
+    transform: scale(1.05);
+}
+
+body.dark-mode .pagination-list .page-item.disabled .page-link {
+    background: #161b22;
+    color: #484f58;
+    border-color: #30363d;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Page Number Badge */
+.page-current-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+body.light-mode .page-current-badge {
+    background: linear-gradient(135deg, #e7f3ff 0%, #cfe7ff 100%);
+    color: #0d6efd;
+    border: 1px solid #b6d7ff;
+}
+
+body.dark-mode .page-current-badge {
+    background: linear-gradient(135deg, #1a2942 0%, #152238 100%);
+    color: #58a6ff;
+    border: 1px solid #1f3b5f;
+}
+
+/* Pagination Jump */
+.pagination-jump {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.page-jump-input {
+    width: 70px;
+    height: 40px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid;
+    font-size: 14px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+body.light-mode .page-jump-input {
+    background: #fff;
+    color: #495057;
+    border-color: #dee2e6;
+}
+
+body.dark-mode .page-jump-input {
+    background: #0d1117;
+    color: #c9d1d9;
+    border-color: #30363d;
+}
+
+body.light-mode .page-jump-input:focus {
+    border-color: #0d6efd;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+body.dark-mode .page-jump-input:focus {
+    border-color: #1f6feb;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(31, 111, 235, 0.25);
+}
+
+.page-jump-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+body.light-mode .page-jump-btn {
+    background: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+}
+
+body.dark-mode .page-jump-btn {
+    background: #1f6feb;
+    color: #fff;
+    border-color: #1f6feb;
+}
+
+body.light-mode .page-jump-btn:hover {
+    background: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+body.dark-mode .page-jump-btn:hover {
+    background: #1a5fd9;
+    border-color: #1857c7;
+}
+
+/* Trade Button */
+body.light-mode .trade-btn {
+    background: #0d6efd;
+    color: #fff;
+    border: 1px solid #0d6efd;
+}
+
+body.dark-mode .trade-btn {
+    background: #1f6feb;
+    color: #fff;
+    border: 1px solid #1f6feb;
+}
+
+body.light-mode .trade-btn:hover {
+    background: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+body.dark-mode .trade-btn:hover {
+    background: #1a5fd9;
+    border-color: #1857c7;
+}
+
+.trade-btn {
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pagination-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .pagination-info {
+        text-align: center;
+    }
+
+    .pagination-nav {
+        justify-content: center;
+    }
+
+    .pagination-jump {
+        justify-content: center;
+    }
+
+    .pagination-list .page-link {
+        min-width: 36px;
+        height: 36px;
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    .page-jump-input,
+    .page-jump-btn {
+        height: 36px;
+    }
+}
+
+
